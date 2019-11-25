@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>Mac Folder Multilingual Settings</title>
+      <link href="/2019/11/25/Mac-Folder-Multilingual-Settings/"/>
+      <url>/2019/11/25/Mac-Folder-Multilingual-Settings/</url>
+      
+        <content type="html"><![CDATA[<p>The chinese dir of finder always needs to switch between Chinese and English input continuously under terminal.<br>This method can create an English dir and display it in Chinese.</p><a id="more"></a><h2 id="close-Rootless"><a href="#close-Rootless" class="headerlink" title="close Rootless"></a>close Rootless</h2><ul><li>shutdown &amp;&amp;  cmd + R </li><li>csrutil disable</li><li>restart computer</li></ul><h2 id="backups-amp-amp-modify"><a href="#backups-amp-amp-modify" class="headerlink" title="backups &amp;&amp; modify"></a>backups &amp;&amp; modify</h2><ul><li>cd /System/Library/CoreServices/SystemFolderLocalizations/zh_CN.lproj</li><li>sudo cp SystemFolderLocalizations.strings SystemFolderLocalizations.strings.bak</li><li>sudo plutil -convert json SystemFolderLocalizations.strings</li><li>add key =&gt; value information</li><li>sudo plutil -convert binary1 SystemFolderLocalizations.strings</li><li>cd ~/targetFolder</li><li>touch .localized</li><li>killall Finder</li></ul><p>It’s over!</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> mac </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="/2019/10/01/hello-world/"/>
       <url>/2019/10/01/hello-world/</url>
